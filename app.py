@@ -44,5 +44,9 @@ def dns():
 def worker():
     return render_template("worker.html")
 
+@app.route("/secure")
+def secure():
+    return render_template("secure.html")
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
