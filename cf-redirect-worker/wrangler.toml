@@ -1,0 +1,10 @@
+name = "cf-redirect-worker"
+main = "src/worker.js"
+compatibility_date = "2023-06-03"
+usage_model = "bundled"
+
+[env.production]
+route = { pattern = "tunnel.zencloud.dev/worker", zone_name = "zencloud.dev", script = "cf-redirect-worker" }
+
+[triggers]
+crons = [ ]
